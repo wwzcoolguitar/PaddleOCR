@@ -21,15 +21,15 @@ font=cv2.FONT_HERSHEY_SIMPLEX
  
 ocr = PaddleOCR(use_angle_cls=True, lang="ch",use_gpu=False,
  
-                rec_model_dir='./models/ch_ppocr_server_v2.0_rec_infer/',
+                rec_model_dir='D:/vscode-python/python/PaddleOCR/models/ch_PP-OCRv3_rec_infer/',
  
-                cls_model_dir='./models/ch_ppocr_mobile_v2.0_cls_infer/',
+                cls_model_dir='D:/vscode-python/python/PaddleOCR/models/ch_ppocr_mobile_v2.0_cls_infer/',
  
-                det_model_dir='./models/ch_ppocr_server_v2.0_det_infer/') # need to run only once to download and load model into memory
+                det_model_dir='D:/vscode-python/python/PaddleOCR/models/ch_PP-OCRv3_det_infer/') # need to run only once to download and load model into memory
  
  
  
-img_path = r'python\PaddleOCR\jietu.png'
+img_path = r'D:\vscode-python\python\lianxi\tupian\xiangmu.png'
  
 result = ocr.ocr(img_path, cls=True)
  
@@ -57,10 +57,10 @@ im_show.save(r'result.png')
 
 # wb = openpyxl.load_workbook('abc.xlsx')
 baconFile = open('abc.txt', 'w')
-i=name=txts
-for i in '12':
-    baconFile.write(str(i)+'   ')
-    for i in name:
-       baconFile.write(str(i))
+# i=name=txts
+# for i in '12':
+baconFile.write(str(txts))
+#     for i in name:
+#        baconFile.write(str(i))
 baconFile.close()
-# print(txts)
+print(txts)
