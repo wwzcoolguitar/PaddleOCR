@@ -29,7 +29,7 @@ ocr = PaddleOCR(use_angle_cls=True, lang="ch",use_gpu=False,
  
  
  
-img_path = r'D:\vscode-python\python\lianxi\tupian\xiangmu.png'
+img_path = r'D:\vscode-python\python\lianxi\tupian\jietu.png'
  
 result = ocr.ocr(img_path, cls=True)
  
