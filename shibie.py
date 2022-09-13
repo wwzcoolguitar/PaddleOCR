@@ -1,4 +1,5 @@
 from msilib.schema import TextStyle
+from pickle import FALSE
 from paddleocr import PaddleOCR
  
 import cv2
@@ -9,7 +10,7 @@ from PIL import Image, ImageDraw, ImageFont
  
 from paddleocr import PaddleOCR, draw_ocr
 import os
-import openpyxl
+import xlwings as xw
  
 font=cv2.FONT_HERSHEY_SIMPLEX
  
@@ -64,3 +65,22 @@ baconFile.write(str(txts))
 #        baconFile.write(str(i))
 baconFile.close()
 print(txts)
+
+
+app = xw.App(visible=True, add_book=FALSE) # 程序可见，只打开不新建工作薄
+app.display_alerts = True # 警告关闭
+app.screen_updating = True # 屏幕更新关闭
+
+path = r"D:\vscode-cuda\cudaocr-master"
+wb = app.books.open(path + r'\txx.xlsx')
+
+
+sheet=wb.sheets.active
+a=1
+for  a in rang(12)
+
+    sheet.range('A1').value= txts[0+1 ]
+    for b in rang(19)
+
+
+wb.save()
