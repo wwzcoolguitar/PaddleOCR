@@ -66,6 +66,8 @@ baconFile.write(str(txts))
 baconFile.close()
 print(txts)
 
+# b=[txts[i:i] for i in range(0,len(txts),1)]
+# print(b)
 
 app = xw.App(visible=True, add_book=FALSE) # 程序可见，只打开不新建工作薄
 app.display_alerts = True # 警告关闭
@@ -76,11 +78,8 @@ wb = app.books.open(path + r'\txx.xlsx')
 
 
 sheet=wb.sheets.active
-a=1
-for  a in rang(12)
 
-    sheet.range('A1').value= txts[0+1 ]
-    for b in rang(19)
-
+# sheet.range('A1').value=txts
+sheet.range('A1').options(transpose=True).value=txts
 
 wb.save()
